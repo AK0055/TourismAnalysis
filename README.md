@@ -1,6 +1,6 @@
 # TourismAnalysis
 This project aims at analysing various tourism trends and answers to questions based on places  customers (with respect to adults/children) have most frequency of booking and travel, also the  most impactful channel for most number of bookings. The Expedia dataset, that we are using in this  project, contains their customer’s travel information like what they searched for, whether or not the  search result was a travel package, the check in and check out date. It aims at understanding user  and customer behavior with the data given in terms of tourism packages provided by Expedia.
-# Motivation
+## Motivation
 Tourism has one of the major contribution for the GDP of a country. Tourism boards and companies 
 in the tourism sector can benefit from big data in many ways. That includes offering packages 
 tailored to visitors' likely interests, and deciding which countries to focus on winning customers in. 
@@ -9,21 +9,21 @@ industry operates. Players in the tourism industry can now make informed decisio
 analytics and number-driven data. They can identify targeted groups of potential customers at every 
 stage in the trip planning process. They can also increase efficiency and the quality of services. Big 
 data can even be used to predict which new products might work well in their market.
-# Objectives
+## Objectives
 1. Analysis on various tourism trends and answers to questions based on places customers 
 (with respect to adults/children) have most frequency of booking and travel, also the most 
 impactful channel for most number of bookings
 2. Feature engineering to shape raw data to useful data such as: duration of stay in hotels, 
 number of days between booking and staying in hotel and check-in time stamp
 3. Finding most popular hotel clusters for each destination 
-# Data Pre-processing
+## Data Pre-processing
 The first step is to clean and pre-process the data and perform exploratory analysis to get some 
 interesting insights into the process of choosing a hotel.
  The users who did not booked the hotel are removed
  The searches by each user belonging to a specific type of destination are identified
  The check-in and check-out dates are found to find the duration of the stay for each of 
 the entries in the training set.
-# Feature Engineering
+## Feature Engineering
 Feature engineering is the process of using domain knowledge to extract features from raw 
 data. A feature is a property shared by independent units on which analysis or prediction is to be 
 done. Features are used by predictive models and influence results. This is performed to extract 
@@ -32,7 +32,7 @@ useful data from the raw data. We are trying to find
  number of days between booking and staying in hotel
  check-in and check-out time stamp
 Plots for books as per day, month and year are performed.
-# Analyse
+## Analyse
 We have implemented a solution with pandas to find the "most popular local hotel" using the 
 datasets available and provide recommendation results.
 Step 1
@@ -45,3 +45,13 @@ number of clicks by subtracting the number of bookings from total row counts. Co
 'relevance' of a hotel cluster with a weighted sum of bookings and clicks.
 Step 3
 Read in the test data and merge most popular hotel clusters
+## Dataset
+The following three datasets were obtained from Expedia hotel recommendations: 
+train.csv (3.79GB)- the training dataset contains information from the year 
+2013 and 2014. It includes logs on all the users and their clicks / booking events. 
+test.csv (263MB) - the test dataset contains only the booking information from the year 2015. 
+destinations.csv (131MB)- consists of features extracted from hotel reviews text. 
+We were provided with the logs of customer behaviour about the hotel booking data across 
+multiple continents, which was further subdivided at countries, city and region level. These include 
+what customers searched for, how they interacted with search results (click/book), whether or not 
+the search result was a travel package.
